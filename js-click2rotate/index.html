@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>点击旋转元素</title>
+    <script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <script src="https://cdn.jsdelivr.net/gh/less/less.js@master/dist/less.min.js"></script>
+  </head>
+  <body>
+    <!-- HTML -->
+    <div class="wrap">
+      <div class="class1"></div>
+      <div class="class2"></div>
+      <div class="class3"></div>
+    </div>
+    <!-- JavaScript -->
+    <script type="text/javascript">
+      $(function () {
+        $("[class^=class]").click(function (event) {
+          event.stopPropagation();
+          let rotate = $(this).data("rotate") || 10;
+          $(this).css({ transform: "rotate(" + rotate + "deg)" });
+          rotate += 10;
+          $(this).data("rotate", rotate);
+        });
+      });
+    </script>
+  </body>
+</html>
