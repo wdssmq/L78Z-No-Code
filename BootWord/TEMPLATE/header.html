@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="<#ZC_BLOG_LANGUAGE#>" xml:lang="<#ZC_BLOG_LANGUAGE#>">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="generator" content="Z-Blog <#ZC_BLOG_VERSION#>">
+<link rel="shortcut icon" href="<#ZC_BLOG_HOST#>favicon.ico">
+<link rel="stylesheet" href="<#ZC_BLOG_HOST#>zb_users/THEME/<#ZC_BLOG_THEME#>/CSS/bootstrap.min.css" media="screen">
+<link rel="stylesheet" href="<#ZC_BLOG_HOST#>zb_users/THEME/<#ZC_BLOG_THEME#>/STYLE/<#ZC_BLOG_CSS#>.css?v=1213" media="screen">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+[if $type="DEFAULT"]
+<title><#ZC_BLOG_TITLE#>_第<#articlelist/page/now#>页_<#BlogTitle#></title>
+<meta name="keywords" content="纠结,Z-Blog,独立博客,<#ZC_BLOG_TITLE#>">
+<meta name="description" content="安心纠结_安心无聊_当前是第<#articlelist/page/now#>页">
+<meta name="author" content="<#ZC_BLOG_TITLE#>" />
+<link rel="alternate" type="application/rss+xml" href="http://feed.wdssmq.com" title="<#ZC_BLOG_TITLE#>">
+<meta name="google-site-verification" content="SevfdJU2g3tXyoysU38LR-rIZd4FG5n6T5UPuUmGYLc">
+<meta name="baidu-site-verification" content="fXGhIvRyvv" />
+<link rel="author" href="https://plus.google.com/106312838807116861524">
+[/if]
+[if $type="CATALOG"]
+<title><#BlogTitle#>_第<#articlelist/page/now#>页_<#ZC_BLOG_TITLE#></title>
+<meta name="keywords" content="<#BlogTitle#>">
+<meta name="description" content="<#BlogTitle#>文章索引页_和<#BlogTitle#>有关的文章_当前是第<#articlelist/page/now#>页">
+<meta name="author" content="沉冰浮水">
+<link rel="alternate" type="application/rss+xml" href="http://feed.wdssmq.com" title="<#ZC_BLOG_TITLE#>">
+[/if]
+[if $type="SINGLE"]
+<title><#BlogTitle#>_<#article/category/name#>_<#ZC_BLOG_TITLE#></title>
+<meta name="keywords" content="<#article/tagtoname#>" />
+<meta name="description" content="<#article/seo#>" />
+<meta name="author" content="<#article/author/name#>" />
+<link rel="alternate" type="application/rss+xml" href="<#ZC_BLOG_HOST#>feed.asp?cmt=<#article/id#>" title="Comments Feed for <#article/title#>" />
+[/if]
+[if $type="PAGE"]
+<title><#BlogTitle#>_<#ZC_BLOG_TITLE#></title>
+<meta name="description" content="<#article/seo#>" />
+<meta name="author" content="<#article/author/name#>" />
+<link rel="alternate" type="application/rss+xml" href="<#ZC_BLOG_HOST#>feed.asp?cmt=<#article/id#>" title="Comments Feed for <#article/title#>" />
+[/if]

@@ -1,0 +1,29 @@
+﻿<div class="post" id="divCommentPost">
+	<h3 id="comment" class="posttop">发表评论:<a id="cancel-reply" href="#divCommentPost" style="display:none;"><small>取消回复</small></a></h3>
+	<form id="frmSumbit" target="_self" method="post" action="<#article/commentposturl#>">
+	<input type="hidden" name="inpId" id="inpId" value="<#article/id#>">
+	<input type="hidden" name="inpArticle" id="inpArticle" value="">
+	<input type="hidden" name="inpRevID" id="inpRevID" value="">
+
+	<label for="inpName">名称(*)</label>
+	<input type="text" name="inpName" id="inpName" class="form-control" value="" size="33" tabindex="1">
+	<label for="inpEmail">邮箱</label>
+	<input type="text" name="inpEmail" id="inpEmail" class="form-control" value="" size="33" tabindex="2">	
+	<label for="inpHomePage">网址</label>
+	<input type="text" name="inpHomePage" id="inpHomePage" class="form-control" value="" size="33" tabindex="3">
+<#template:article_commentpost-verify:begin#>
+	<label for="inpVerify">验证码(*)</label>
+	<div><input type="text" name="inpVerify" id="inpVerify" class="form-control" value="" size="33" tabindex="4">
+	<img style="border:1px solid silver;width:<#ZC_VERIFYCODE_WIDTH#>px;height:<#ZC_VERIFYCODE_HEIGHT#>px;" src="<#ZC_BLOG_HOST#>zb_system/function/c_validcode.asp?name=commentvalid" alt="验证码" title="验证码">
+	</div>
+<#template:article_commentpost-verify:end#>
+  <#xnxf/geetest#>
+	<label for="txaArticle"><#ZC_MSG055#>(*)(<#ZC_MSG056#>:<#ZC_CONTENT_MAX#>)</label>
+	<textarea name="txaArticle" id="txaArticle" class="form-control" cols="60" rows="5" tabindex="5" onchange="GetActiveText(this.id);" onclick="GetActiveText(this.id);" onfocus="GetActiveText(this.id);"></textarea>
+	<input name="sumbit" type="submit" tabindex="6" value="提交" onclick="JavaScript:return VerifyMessage();" class="btn btn-default" title="提交">
+	<input type="checkbox" name="chkRemember" value="1" id="chkRemember" checked> <label for="chkRemember"><#ZC_MSG049#></label>
+	<script language="JavaScript" type="text/javascript">objActive="txaArticle";ExportUbbFrame();</script>
+	</form>
+	<p class="postbottom">◎欢迎参与讨论，请在这里发表您的看法、交流您的观点。</p>
+	<script language="JavaScript" type="text/javascript">LoadRememberInfo();</script>
+</div>

@@ -1,0 +1,1 @@
+﻿<div class="col-sm-12 toptip"><div class="post"><strong><i class="glyphicon glyphicon-volume-up"></i> 若访问本站过程中发现失效的下载地址请 <a class="text-danger" title="微视界影视资源交流" href="http://shang.qq.com/wpa/qunwpa?idkey=f19022a041e6c0969ff3e9d4a8c4d0eaabd924677f9b00f8141af69d5c2300ae" target="_blank" rel="nofollow">点击这里反馈</a></strong></div></div>
