@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /URL_Rewrite/
+
+# 文章规则
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^post/([^/]+).html$ /URL_Rewrite/index.php?id=$1 [L]
+# 文章规则结束
+
+# # 不对访问链接作解析，只要不存在就全部交给 php 处理
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule . /URL_Rewrite/index.php [L]
+</IfModule>

@@ -7,6 +7,9 @@ $options = array(
 );
 $options["host"] = str_replace("index.php", "", $options["host"]);
 
+// 伪静态开关切换
+$options["is_rewrite"] = true;
+
 // 首页数据
 $home = array(
   "title" => "首页",
@@ -20,6 +23,11 @@ $post = array(
   "url" => $options["host"] . "?id=3",
   "content" => "文章内容"
 );
+
+// 文章 url 改为静态形式
+if ($options["is_rewrite"]) {
+  $post["url"] = $options["host"] . "post/3.html";
+}
 
 // 404 页面
 $err = array(
