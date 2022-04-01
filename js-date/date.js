@@ -7,11 +7,11 @@
   }
   // Date 对象格式化为 "2021-12-06"
   function fnFormatDate(oDate) {
-    const sDate = oDate.getDate();
+    let sDate = oDate.getDate();
     if (sDate < 10) {
       sDate = "0" + sDate;
     }
-    const sMonth = oDate.getMonth() + 1;
+    let sMonth = oDate.getMonth() + 1;
     if (sMonth < 10) {
       sMonth = "0" + sMonth;
     }
