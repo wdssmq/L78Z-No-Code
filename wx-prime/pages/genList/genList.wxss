@@ -4,5 +4,5 @@
 }
 
 .list-footer {
-  font-size: .35em;
+  font-size: .75em;
 }
