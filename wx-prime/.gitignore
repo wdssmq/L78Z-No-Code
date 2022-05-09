@@ -1,0 +1,4 @@
+.history
+*.code-workspace
+project.config.json
+project.private.config.json
