@@ -4,8 +4,8 @@
     ],
     "window": {
         "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "TES",
+        "navigationBarBackgroundColor": "#42b983",
+        "navigationBarTitleText": "质数工具箱",
         "navigationBarTextStyle": "black"
     },
     "style": "v2",
