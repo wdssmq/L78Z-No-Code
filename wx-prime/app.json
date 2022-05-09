@@ -3,6 +3,23 @@
         "pages/index/index",
         "pages/genList/genList"
     ],
+    "tabBar": {
+        "selectedColor": "#42b983",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "iconPath": "static/imgs/noun-one.png",
+                "selectedIconPath": "static/imgs/noun-one-focus.png",
+                "text": ""
+            },
+            {
+                "pagePath": "pages/genList/genList",
+                "iconPath": "static/imgs/noun-two.png",
+                "selectedIconPath": "static/imgs/noun-two-focus.png",
+                "text": ""
+            }
+        ]
+    },
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#42b983",
