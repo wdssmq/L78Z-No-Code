@@ -1,4 +1,4 @@
-// index.js
+// pages/index/index.js
 const utils = require('../../utils/util.js')
 Page({
   data: {
