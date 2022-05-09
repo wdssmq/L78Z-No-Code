@@ -7,7 +7,7 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
 
 .w-full {
   width: 79%;
@@ -25,6 +25,26 @@
   align-items: center;
 }
 
+.is-flex-grow-0 {
+  flex-grow: 0 !important;
+}
+
+.has-text-gray {
+  color: gray;
+}
+
+.has-text-centered {
+  text-align: center !important;
+}
+
+hr {
+  background-color: whitesmoke;
+  border: none;
+  display: block;
+  height: 2px;
+  margin: .75rem 0;
+}
+
 .field {
   display: block;
 }
@@ -39,7 +59,7 @@
   padding-left: calc(0.25em - 1px);
 }
 
-.field .label + .control {
+.field .label+.control {
   padding-top: 0.35rem;
   display: block;
 }
