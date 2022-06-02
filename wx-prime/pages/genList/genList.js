@@ -1,5 +1,5 @@
 // pages/genList/genList.js
-const utils = require('../../utils/util.js')
+const utils = require("../../utils/util.js");
 Page({
   data: {
     baseNum: [7, 13],
@@ -13,8 +13,8 @@ Page({
     this.data.baseNum.forEach(
       item => {
         this._getPriList(item);
-      }
-    )
+      },
+    );
     this._genPickList();
   },
   _getPriList: function (base) {
@@ -43,7 +43,7 @@ Page({
       }
     }
     this.setData({
-      pickList: pickList
+      pickList: pickList,
     });
-  }
-})
+  },
+});
