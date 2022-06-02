@@ -1,4 +1,5 @@
 .history
 *.code-workspace
+node_modules
 project.config.json
 project.private.config.json
