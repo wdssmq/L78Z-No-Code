@@ -1,0 +1,30 @@
+{
+  "pages": [
+      "pages/index/main",
+      "pages/genList/main"
+  ],
+  "tabBar": {
+      "selectedColor": "#42b983",
+      "list": [
+          {
+              "pagePath": "pages/index/main",
+              "iconPath": "static/imgs/noun-one.png",
+              "selectedIconPath": "static/imgs/noun-one-focus.png",
+              "text": ""
+          },
+          {
+              "pagePath": "pages/genList/main",
+              "iconPath": "static/imgs/noun-two.png",
+              "selectedIconPath": "static/imgs/noun-two-focus.png",
+              "text": ""
+          }
+      ]
+  },
+  "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#42b983",
+      "navigationBarTitleText": "质数工具箱",
+      "navigationBarTextStyle": "black"
+  },
+  "style": "v2"
+}
