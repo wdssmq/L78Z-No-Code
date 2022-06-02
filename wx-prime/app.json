@@ -8,14 +8,14 @@
         "list": [
             {
                 "pagePath": "pages/index/index",
-                "iconPath": "static/imgs/noun-one.png",
-                "selectedIconPath": "static/imgs/noun-one-focus.png",
+                "iconPath": "static/imgs/tab-01.png",
+                "selectedIconPath": "static/imgs/tab-01-focus.png",
                 "text": ""
             },
             {
                 "pagePath": "pages/genList/genList",
-                "iconPath": "static/imgs/noun-two.png",
-                "selectedIconPath": "static/imgs/noun-two-focus.png",
+                "iconPath": "static/imgs/tab-02.png",
+                "selectedIconPath": "static/imgs/tab-02-focus.png",
                 "text": ""
             }
         ]
