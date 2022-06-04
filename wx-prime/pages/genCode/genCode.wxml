@@ -4,7 +4,7 @@
     <div class="field">
       <label class="label">输入一个数字：</label>
       <div class="control">
-        <input class="input" type="number" bindinput="getInputNum" value="{{inputNum}}" placeholder="输入一个数字" />
+        <input class="input" type="number" bindinput="getInputNum" placeholder="输入一个数字" />
       </div>
     </div>
     <!--  -->

@@ -9,7 +9,7 @@ Page({
     curDays: 1,
     // --------------------------------------------------
     isRunning: false,
-    inputNum: 1024,
+    inputNum: null,
     bolViewRlt: false,
     msgRlt: "",
   },
