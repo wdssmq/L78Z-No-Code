@@ -1,7 +1,8 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/genList/genList"
+        "pages/genList/genList",
+        "pages/genCode/genCode"
     ],
     "tabBar": {
         "selectedColor": "#42b983",
@@ -16,6 +17,12 @@
                 "pagePath": "pages/genList/genList",
                 "iconPath": "static/imgs/tab-02.png",
                 "selectedIconPath": "static/imgs/tab-02-focus.png",
+                "text": ""
+            },
+            {
+                "pagePath": "pages/genCode/genCode",
+                "iconPath": "static/imgs/tab-03.png",
+                "selectedIconPath": "static/imgs/tab-03-focus.png",
                 "text": ""
             }
         ]

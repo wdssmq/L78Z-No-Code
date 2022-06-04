@@ -1,0 +1,41 @@
+<!--pages/genCode/genCode.wxml-->
+<view class="container">
+  <view class="page-section w-full">
+    <div class="field">
+      <label class="label">输入一个数字：</label>
+      <div class="control">
+        <input class="input" type="number" bindinput="getInputNum" value="{{inputNum}}" placeholder="输入一个数字" />
+      </div>
+    </div>
+    <!--  -->
+    <div class="field">
+      <label class="label">选择周期：</label>
+      <div class="control">
+        <picker bindchange="swCyclePicker" range-key="value" value="{{curIndex}}" range="{{cycleList}}">
+          <view class="picker">
+            <input class="input" type="number" disabled="true" value="{{cycleList[curIndex].value}} 天" />
+          </view>
+        </picker>
+      </div>
+    </div>
+    <!--  -->
+    <div class="field">
+      <div class="control">
+        <button class="button" size="mini" bindtap="defMain">执行
+        </button>
+      </div>
+    </div>
+  </view>
+  <!--  -->
+  <view class="page-section w-full">
+    <!-- <input wx:if="{{bolViewRlt}}" class="input" type="text" value="{{msgRlt}}" disabled="true" /> -->
+    <view wx:if="{{bolViewRlt}}" class="is-pre-wrap hr-top">{{ msgRlt }}</view>
+  </view>
+  <view class="page-section em-dot-85 w-ful">
+    <view class="ti ti-3 hr-top">说明：</view>
+    <view>1. 输出结果为 4 个字母外加一个数字；</view>
+    <view>2. 数字表示当前周期的剩余天数；</view>
+    <view>3. 对于相同输入及周期参数，在当前周期内将得到相同的字母；</view>
+    <view>4. 请在充分理解本说明的前提下使用生成的字母；</view>
+  </view>
+</view>
