@@ -1,7 +1,3 @@
-function log(...args) {
-    console.log(...args);
-}
-
 // 判断输入是否为质数
 function isPrime(num) {
     num = parseInt(num);
@@ -31,7 +27,6 @@ function nthPrime(n) {
     return num - 1;
 }
 module.exports = {
-    log: log,
     isPrime: isPrime,
     nthPrime: nthPrime
 }
