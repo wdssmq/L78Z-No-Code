@@ -18,7 +18,7 @@
     </view>
     <!--  -->
     <view class="page-section-footer">
-      <view class="hr-top">当你需要选取某几个数，却为此困扰时；</view>
+      <view class="hr-top em-dot-75">当你需要选取某几个数，却为此困扰时；</view>
     </view>
     <!--  -->
   </view>
