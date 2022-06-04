@@ -5,12 +5,44 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 200rpx 0;
+  padding: 200rpx .75rem;
   box-sizing: border-box;
 }
 
 .w-full {
-  width: 79%;
+  width: 93%;
+}
+
+.hr-top {
+  border-top: whitesmoke solid 2px;
+  margin-top: .35rem;
+  padding-top: .25rem;
+}
+
+.hr-bottom {
+  border-bottom: whitesmoke solid 2px;
+  margin-bottom: .35rem;
+  padding-bottom: .25rem;
+}
+
+.em-dot-75 {
+  font-size: .75rem;
+}
+
+.em-dot-85 {
+  font-size: .85em;
+}
+
+.ti {
+  font-weight: 700;
+}
+
+.ti.ti-2{
+  font-size: 1.3em;
+}
+
+.ti.ti-3 {
+  font-size: 1.2em;
 }
 
 .is-pre-wrap {

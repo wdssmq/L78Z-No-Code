@@ -3,25 +3,27 @@ const utils = require("../../utils/util.js");
 Page({
   data: {
     lt: "<",
-    isRuning: false,
-    inputNum: null,
     swNth: false,
+    // --------------------------------------------------
+    isRunning: false,
+    inputNum: null,
     bolViewRlt: false,
     msgRlt: "",
   },
-  defMain: function () {
-    if (this.data.isRuning) {
+  defMain() {
+    if (this.data.isRunning) {
       utils.log("正在运行中...");
       return;
     }
     this.setData({
-      isRuning: true,
+      isRunning: true,
     });
     const num = this.data.inputNum;
-    if (num == null) {
+    console.log(num);
+    if (num === null) {
       this.setData({
         bolViewRlt: true,
-        isRuning: false,
+        isRunning: false,
         msgRlt: "请输入数字；",
       });
       return;
@@ -39,20 +41,22 @@ Page({
     }
     this.setData({
       bolViewRlt: true,
-      isRuning: false,
+      isRunning: false,
       msgRlt: msg.join("\n"),
     });
   },
-  getInputNum: function (e) {
+  getInputNum(e) {
     let num = e.detail.value;
-    if (isNaN(num)) {
+    if (isNaN(num) || num.trim() === "") {
       num = null;
+    } else {
+      num = parseInt(num);
     }
     this.setData({
       inputNum: num,
     });
   },
-  swNthChange: function (e) {
+  swNthChange(e) {
     let bolNth = e.detail.value;
     this.setData({
       swNth: bolNth,

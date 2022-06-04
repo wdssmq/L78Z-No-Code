@@ -1,8 +1,1 @@
 /* pages/genList/genList.wxss */
-.list-title {
-  font-size: 1.2em;
-}
-
-.list-footer {
-  font-size: .75em;
-}

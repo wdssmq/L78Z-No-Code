@@ -1,23 +1,25 @@
 <!--pages/genList/genList.wxml-->
 <view class="container">
-    <view class="page-section w-full">
-        <view class="page-section-title list-title">
-            <text>{{msg}}</text>
-            <hr />
-        </view>
-        <view class="page-section-spacing">
-            <view class="is-flex" wx:for="{{pickList}}" wx:key="index">
-                <view class="is-flex-grow-0 has-text-centered w-full">
-                    {{item[0]}}
-                </view>
-                <view class="is-flex-grow-0 has-text-centered has-text-gray w-full">
-                    {{item[1]}}
-                </view>
-            </view>
-        </view>
-        <view class="page-section-footer list-footer">
-            <hr />
-            当你需要选取某几个数，却为此困扰时；
-        </view>
+  <view class="page-section w-full">
+    <!--  -->
+    <view class="page-section-title">
+      <view class="ti ti-h2 hr-bottom">{{msg}}</view>
     </view>
+    <!--  -->
+    <view class="page-section-spacing">
+      <view class="is-flex" wx:for="{{pickList}}" wx:key="index">
+        <view class="is-flex-grow-0 has-text-centered w-full">
+          {{item[0]}}
+        </view>
+        <view class="is-flex-grow-0 has-text-centered has-text-gray w-full">
+          {{item[1]}}
+        </view>
+      </view>
+    </view>
+    <!--  -->
+    <view class="page-section-footer">
+      <view class="hr-top">当你需要选取某几个数，却为此困扰时；</view>
+    </view>
+    <!--  -->
+  </view>
 </view>
