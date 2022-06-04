@@ -14,7 +14,7 @@ module.exports = {
   },
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: 'module',
+    sourceType: "module",
   },
   globals: {
     wx: true,
@@ -37,4 +37,5 @@ module.exports = {
     "semi": [2, "always", { "omitLastInOneLineBlock": true }],
     "quotes": [2, "double"],
     // "no-debugger": process.env.NODE_ENV === "production" ? 2 : 0,},
-  }
+  },
+};
