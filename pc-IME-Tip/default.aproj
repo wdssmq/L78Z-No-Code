@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project ver="10" name="IME-Tip" libEmbed="true" icon="app.ico" ui="win" output="IME-Tip.exe" CompanyName="GesF Lib" FileDescription="提示输入法状态；" LegalCopyright="wdssmq | MIT" ProductName="IME-Tips" InternalName="IME-Tips" FileVersion="0.0.0.02" ProductVersion="0.0.0.02" publishDir="/dist/" dstrip="false" local="false" ignored="false">
+	<file name="main.aardio" path="main.aardio" comment="main.aardio"/>
+	<folder name="资源文件" path="res" embed="true" local="false" ignored="false"/>
+	<folder name="窗体文件" path="dlg" comment="目录" embed="true" local="false" ignored="false"/>
+</project>
