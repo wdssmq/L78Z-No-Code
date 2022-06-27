@@ -5,7 +5,7 @@ mainForm.add()
 /*}}*/
 
 import key.ime.stateBar;
-var imeBar = key.ime.stateBar(mainForm,50,50);
+var imeBar = key.ime.stateBar(mainForm, 500, 50, 50);
 
 // 输入法状态提示
 // imeBar.imeSkin(/*ImTipConfig{{*/<?= owner.imptipConfig ?>/*}}*/)
