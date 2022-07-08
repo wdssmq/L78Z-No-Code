@@ -53,7 +53,7 @@ Page({
         pickList.push([arrLine.join(" - "), i]);
       }
       return bolPick;
-    }
+    };
     for (let i = 0; i <= this.data.baseLen; i++) {
       fnPickByLine(i);
     }
