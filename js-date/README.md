@@ -12,3 +12,14 @@
 const oDate = new Date();
 console.log(oDate.getDay());
 ```
+
+### 获取 2022-07-18 格式的日期
+
+```js
+const curDate = new Date();
+const _getDateStr = (date = curDate) => {
+  const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+  return date.toLocaleDateString("zh-CN", options).replace(/\//g, "-");
+}
+console.log(_getDateStr());
+```
