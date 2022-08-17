@@ -1,0 +1,4 @@
+.history
+__pycache__
+*.code-workspace
+config.json
