@@ -8,6 +8,8 @@
 
 想着统计下每一项在全部历史文件中出现在次数然后排序，出现过少的就可以从插件配置中剔除；
 
+<!--more-->
+
 ## config.json
 
 需要在脚本同目录下准备一个`config.json`来定义配置项；
@@ -22,3 +24,14 @@
     "outfile": "输出文件路径，绝对地址，缺省为「{pwd}/out{ext}」"
 }
 ```
+
+## 下载
+
+py-statistics-lines · 沉冰浮水/水水的旧代码合集 - 码云 - 开源中国：
+
+[https://gitee.com/wdssmq/StaleCode/tree/master/py-statistics-lines](https://gitee.com/wdssmq/StaleCode/tree/master/py-statistics-lines "py-statistics-lines · 沉冰浮水/水水的旧代码合集 - 码云 - 开源中国")
+
+
+# 投喂支持
+
+[https://gitee.com/wdssmq/StaleCode/tree/master#二维码](https://gitee.com/wdssmq/StaleCode/tree/master#二维码 "master#二维码")
