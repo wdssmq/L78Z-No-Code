@@ -17,9 +17,31 @@ console.log(oDate.getDay());
 
 ```js
 const curDate = new Date();
-const _getDateStr = (date = curDate) => {
+const fnDateToStr = (date = curDate) => {
   const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
   return date.toLocaleDateString("zh-CN", options).replace(/\//g, "-");
 }
-console.log(_getDateStr());
+console.log(fnDateToStr());
+```
+
+### 2021-12-06 转 Date 对象
+
+```js
+// "2021-12-06" 转 Date 对象
+function fnStrToDate(str) {
+  const arr = str.split("-");
+  const date = new Date(arr[0], arr[1] - 1, arr[2]);
+  return date;
+}
+```
+
+### 关于 `setMonth()`
+
+```js
+const testDate = fnStrToDate("2022-10-31");
+// 设置为 9 月
+testDate.setMonth(9 - 1);
+// 9 月并没有 31 号，所以会自动变成 10 月 1 号
+console.log(fnDateToStr(testDate));
+// 2022-10-01
 ```
