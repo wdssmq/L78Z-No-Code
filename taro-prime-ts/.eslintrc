@@ -1,5 +1,64 @@
 // ESLint 检查 .vue 文件需要单独配置编辑器：
 // https://eslint.vuejs.org/user-guide/#editor-integrations
 {
-  "extends": ["taro/vue3"]
+  "extends": [
+    "taro/vue3"
+  ],
+  "rules": {
+    "vue/multi-word-component-names": "off",
+    "generator-star-spacing": 0,
+    // ------------------------------
+    "comma-dangle": [
+      1,
+      "always-multiline"
+    ],
+    "arrow-parens": [
+      1,
+      "as-needed",
+      {
+        "requireForBlockBody": true
+      }
+    ],
+    "no-unused-vars": [
+      1,
+      {
+        "args": "none"
+      }
+    ],
+    "space-before-function-paren": [
+      1,
+      {
+        "anonymous": "never",
+        "named": "never"
+      }
+    ],
+    // ------------------------------
+    "semi": [
+      2,
+      "always",
+      {
+        "omitLastInOneLineBlock": true
+      }
+    ],
+    "quotes": [
+      2,
+      "double"
+    ],
+    "spaced-comment": [
+      2,
+      "always",
+      {
+        "markers": [
+          "/"
+        ]
+      }
+    ],
+    "no-irregular-whitespace": [
+      2,
+      {
+        "skipStrings": true,
+        "skipRegExps": true
+      }
+    ]
+  }
 }

@@ -1,6 +1,6 @@
 {
   "miniprogramRoot": "./dist",
-  "projectname": "taro-prime",
+  "projectname": "taro-prime-ts",
   "description": "质数工具箱",
   "appid": "touristappid",
   "setting": {

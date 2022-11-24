@@ -1,6 +1,6 @@
 {
   "miniprogramRoot": "./",
-  "projectname": "taro-prime",
+  "projectname": "taro-prime-ts",
   "appid": "testAppId",
   "setting": {
     "es6": false,
