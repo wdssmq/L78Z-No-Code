@@ -61,6 +61,20 @@ from py_base.base import fnEmpty, fnLog, fnBug, fnErr # NOQA: E402
 1. 被引用的文件夹不能有`-`，所以不能用引号么？
 2. 有说法说`__init__.py`是必须的（可以为空），实测是没有也可以，不太懂.jpg；
 
+### Python 安装
+
+```bash
+# 查看 Python 版本
+python --version
+
+# 安装 Python3 Ubuntu/Debian
+sudo apt-get install python3
+# sudo apt-get install python3-pip
+# pip3 install --upgrade pip setuptools wheel
+
+python3 --version
+```
+
 ### 投喂
 
 二维码：[https://github.com/wdssmq#二维码](https://github.com/wdssmq#二维码 "wdssmq#二维码")
