@@ -41,6 +41,13 @@ def fnErr(msg, tip=None):
 # -----------
 
 
+def fnMkdir(path):
+    '''创建文件夹'''
+    if not os.path.exists(path):
+        os.mkdir(path)
+# 创建文件夹
+
+
 def fnGetDirsInDir(path):
     '''获取子文件夹'''
     return [x for x in os.listdir(path) if os.path.isdir(x)]
