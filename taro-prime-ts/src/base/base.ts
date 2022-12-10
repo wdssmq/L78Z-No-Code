@@ -31,6 +31,7 @@ function nthPrime(n: number) {
   return num - 1;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function log(...args: any[]) {
   console.log(...args);
 }
@@ -72,7 +73,7 @@ function defCalc(obj: Stores, inpNum?: string | number) {
     obj.lstMsg = obj.rltMsg;
   }
   obj.lstNum = obj.inpNum;
-  let msg = [] as Array<string>;
+  const msg = [] as Array<string>;
   const _isPrime = isPrime(obj.inpNum);
   msg.push(`${obj.inpNum} ${_isPrime ? "是" : "不是"}质数；`);
   if (obj.inpNum > 999999) {
@@ -159,7 +160,7 @@ function _genCycleList() {
   let i = 0;
   while (cycleList.length < 7) {
     i += 1;
-    let num = i * 40;
+    const num = i * 40;
     fnAddCheck(num, addList[0]) || fnAddCheck(num, addList[1]);
   }
   cycleList.reverse();

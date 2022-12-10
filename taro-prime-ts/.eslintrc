@@ -2,11 +2,32 @@
 // https://eslint.vuejs.org/user-guide/#editor-integrations
 {
   "extends": [
-    "taro/vue3"
+    "taro/vue3",
+    "eslint:recommended",
+    "plugin:vue/vue3-essential",
+    "plugin:@typescript-eslint/recommended"
   ],
+  "plugins": [
+    "vue",
+    "@typescript-eslint"
+  ],
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "parser": "@typescript-eslint/parser",
+    "sourceType": "module"
+  },
+  "globals": {
+    "module": "readonly",
+    "process": "readonly",
+    "require": "readonly"
+  },
   "rules": {
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/triple-slash-reference": "off",
     "vue/multi-word-component-names": "off",
-    "generator-star-spacing": 0,
+    "vue/no-v-text-v-html-on-component": "off",
+    "generator-star-spacing": "off",
     // ------------------------------
     "comma-dangle": [
       1,

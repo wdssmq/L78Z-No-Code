@@ -67,6 +67,7 @@ export default {
     };
   },
   watch: {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     inputNum(curValue, lstValue) {
       const verifyNum = base.setNum(curValue, base.stores);
       this.inputNum = verifyNum;
