@@ -1,5 +1,6 @@
 // 导入声明文件
 /// <reference path="./base.d.ts" />
+import { Stores, CycleListItem } from "./base.d";
 
 // 判断输入是否为质数
 function isPrime(num: string | number) {
@@ -36,7 +37,7 @@ function log(...args: any[]) {
 
 // --------------------------------------------
 
-function setNum(inpNum: string | number | null, obj: { inpNum: any; }) {
+function setNum(inpNum: string | number | null, obj: Stores) {
   inpNum = parseInt(inpNum as string);
   if (isNaN(inpNum)) {
     inpNum = null;
@@ -140,7 +141,7 @@ function genList(obj: Stores) {
 // --------------------------------------------
 
 function _genCycleList() {
-  const cycleList = [] as Array<object>;
+  const cycleList = [] as Array<CycleListItem>;
   const addList = [17, 19];
   const fnAddCheck = (num: number, add: number) => {
     const sum = num + add;
@@ -165,7 +166,7 @@ function _genCycleList() {
   return cycleList;
 }
 
-function _getIndex(value: number, array: string | any[]) {
+function _getIndex(value: number, array: Array<CycleListItem>) {
   for (let i = 0; i < array.length; i++) {
     if (array[i].value === value) {
       return i;
@@ -205,7 +206,7 @@ function _genCode(num: number, cycle: number, days: number) {
 function codeReady(obj: Stores) {
   const curTime = Math.floor((new Date()).getTime() / 1000);
   const curDays = Math.floor(curTime / 86400);
-  const cycleList = _genCycleList();
+  const cycleList = _genCycleList() as Array<CycleListItem>;
   const defCycle = obj.curCycle;
   const defIndex = _getIndex(defCycle, cycleList);
   // 合并赋值给 obj

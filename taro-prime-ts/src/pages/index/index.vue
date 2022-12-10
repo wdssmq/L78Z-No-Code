@@ -60,7 +60,7 @@ export default {
       this.lstMsg = base.stores.lstMsg;
       base.log("defMain", base.stores);
     },
-    swNthChange(e: { detail: { value: any; }; }) {
+    swNthChange(e: { detail: { value: boolean; }; }) {
       // console.log(e);
       let swNth = e.detail.value;
       base.stores.swNth = swNth;

@@ -1,8 +1,8 @@
-interface CycleListItem {
+export interface CycleListItem {
   value: number;
 }
 
-interface Stores {
+export interface Stores {
   isRunning: boolean,
   // -------------------
   inpNum: null | number,

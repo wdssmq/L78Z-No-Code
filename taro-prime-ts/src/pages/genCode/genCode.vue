@@ -46,6 +46,7 @@
 </template>
 
 <script lang="ts">
+import { CycleListItem } from "../../base/base.d";
 import "./genCode.scss";
 import { ref } from "vue";
 import base from "../../base/base";
@@ -72,7 +73,7 @@ export default {
     },
   },
   methods: {
-    swCyclePicker(e: { detail: { value: any; }; }) {
+    swCyclePicker(e: { detail: { value: number; }; }) {
       const index = e.detail.value;
       base.swCycle(index, base.stores);
       this.curCycle = base.stores.curCycle;
