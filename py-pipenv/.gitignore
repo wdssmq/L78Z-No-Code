@@ -1,0 +1,6 @@
+.history
+__pycache__
+virtualenv
+*.code-workspace
+output.json
+Pipfile.lock
