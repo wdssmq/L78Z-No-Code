@@ -15,12 +15,18 @@ fnLog("当前时间戳为: %s" % c_time)
 # fnLog("当前日期为: %s" % c_date)
 
 # 查看当前工作目录
-retval = os.getcwd()
-fnLog("当前工作目录为 %s" % retval)
+cwd_path = os.getcwd()
+# 查看当前脚本文件的路径
+py_path = os.path.realpath(__file__)
+# 查看当前脚本文件的目录
+py_dir = os.path.dirname(py_path)
+fnLog("当前工作目录为 %s" % cwd_path)
+fnLog("当前脚本路径为 %s" % py_path)
+fnLog("当前脚本目录为 %s" % py_dir)
 
 fnLog("--------")
 
-gob_config = loadConfig()
+gob_config = loadConfig(py_dir)
 gob_list = []
 
 

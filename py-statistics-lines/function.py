@@ -3,10 +3,15 @@ import sys
 import json
 
 
-def loadConfig():
+def loadConfig(dir=""):
     config_info = {}
-    if((os.path.exists("config.json") == True)):
-        with open("config.json", 'rb') as f:
+    # 如果 dir 为空，则使用当前目录
+    if(dir == ""):
+        dir = os.getcwd()
+    # 拼接 dir + "/config.json" 文件路径
+    cfg_path = "%s/config.json" % dir
+    if os.path.exists("%s/config.json" % dir):
+        with open(cfg_path, 'rb') as f:
             config_info = json.loads(f.read())
     # 如果存在 ext 字段，判断是否为 . 开头，如果不是，则添加 . 开头
     if("ext" in config_info):
