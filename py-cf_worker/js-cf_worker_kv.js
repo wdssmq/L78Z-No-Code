@@ -37,24 +37,29 @@ async function handleRequest(request) {
     return JSONResponse(oRlt);
   }
 
-  // 读取已有的数据， 数量到达上限时，删除最早的一个
-  const db = await getCache("urls");
-  if (db.length > MaxCount) {
-    db.shift();
-  }
   // 获取请求的路径和参数
   const { pathname, searchParams } = new URL(request.url);
 
+  // 获取分类
+  const category = searchParams.get("category") || "default";
+
+  // 读取已有的数据， 数量到达上限时，删除最早的一个
+  const db = await getCache(category) || [];
+
+  if (db.length > MaxCount) {
+    db.shift();
+  }
+
   // 添加一个新的记录
   if (pathname === "/add" && searchParams.has("url") && searchParams.has("title")) {
-    // const item = { url: "https://www.google.com", title: "Google" };
+    // 添加新的记录
     const item = {
       url: searchParams.get("url"),
       title: searchParams.get("title"),
     };
     if (!hasItem(item, db)) {
       db.push(item);
-      setCache("urls", db);
+      setCache(category, db);
       oRlt.more = `added ${item.url}, all urls: ${db.length}`;
     } else {
       oRlt.code = 400;
