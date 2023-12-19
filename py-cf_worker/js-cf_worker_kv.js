@@ -6,30 +6,29 @@ addEventListener("fetch", (event) => {
   );
 });
 
-
 const setCache = (key, data) => LATER_URL.put(key, JSON.stringify(data));
 const getCache = (key, type = "json") => LATER_URL.get(key, { type });
 const hasItem = (item, data) => data.some((i) => i.url === item.url);
 
-// worker 面板中添加一个环境变量 BEARER_TOKEN 用于鉴权
+// 环境变量 BEARER_TOKEN 用于鉴权
 const BearerToken = "Bearer " + BEARER_TOKEN;
+// 环境变量指定最大记录数
+const MaxCount = MAX_COUNT || 137;
 
+// 返回 JSON 格式的数据
 const JSONResponse = (data) => new Response(JSON.stringify(data), {
   headers: { "Content-Type": "application/json" }
 });
 
-/**
-* Many more examples available at:
-*   https://developers.cloudflare.com/workers/examples
-* @param {Request} request
-* @returns {Promise<Response>}
-*/
+// 处理请求
 async function handleRequest(request) {
   const oRlt = {
     code: 200,
     msg: "success",
     more: "",
   }
+
+  // 鉴权
   const curToken = request.headers.get('Authorization');
   if (curToken !== BearerToken) {
     oRlt.code = 401;
@@ -37,12 +36,16 @@ async function handleRequest(request) {
     oRlt.more = `Authorization error ${curToken}`;
     return JSONResponse(oRlt);
   }
-  const { pathname, searchParams } = new URL(request.url);
+
+  // 读取已有的数据， 数量到达上限时，删除最早的一个
   const db = await getCache("urls");
-  // 数量到达上限时，删除最早的一个
-  if (db.length > 137) {
+  if (db.length > MaxCount) {
     db.shift();
   }
+  // 获取请求的路径和参数
+  const { pathname, searchParams } = new URL(request.url);
+
+  // 添加一个新的记录
   if (pathname === "/add" && searchParams.has("url") && searchParams.has("title")) {
     // const item = { url: "https://www.google.com", title: "Google" };
     const item = {
@@ -60,6 +63,8 @@ async function handleRequest(request) {
     }
     return JSONResponse(oRlt);
   }
+
+  // 查询所有记录
   if (pathname === "/list") {
     return JSONResponse(db);
   }
