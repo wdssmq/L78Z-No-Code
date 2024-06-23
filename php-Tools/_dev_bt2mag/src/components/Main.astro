@@ -1,17 +1,24 @@
 ---
 
 ---
+
 <article class="prose max-w-none">
     <p class="help-block">选择种子文件，点击 解析 按钮</p>
     <form method="post" target="_blank" enctype="multipart/form-data">
-        <input type="file" class="file-input file-input-bordered w-full max-w-xs" name="torrent" id="torrent" />
+        <input
+            type="file"
+            class="file-input file-input-bordered w-full max-w-xs"
+            name="inp-torrent"
+            id="inp-torrent"
+        />
+        <button id="js-submit" class="btn">提交</button>
     </form>
-    <h3 class="js-show fade hidden">
+    <h3 id="js-rlt-hd" class="fade hidden">
         结果
-        <small class="js-copy" data-clipboard-target="#result">复制</small>
+        <small class="js-copy" data-clipboard-target="#js-rlt-body">复制</small>
     </h3>
-    <div class="js-result" id="result"></div>
-    <hr/>
+    <div id="js-rlt-body"></div>
+    <hr />
     <h3>声明</h3>
     <p>
         本 web
@@ -21,3 +28,86 @@
     <p>群名称: 我的咸鱼心</p>
     <p>群号: 189574683</p>
 </article>
+
+<script>
+// 引入 clipboard
+import ClipboardJS from 'clipboard';
+(() => {
+    const config = {
+        url: 'http://127.0.0.1:8081/Tools/bt2mag/ajax.php',
+        $$: {
+            _torrent: () => document.getElementById('inp-torrent'),
+            $btnSubmit: document.getElementById('js-submit') as HTMLButtonElement,
+            $rltHd: document.getElementById('js-rlt-hd') as HTMLElement,
+            $rltBody: document.getElementById('js-rlt-body') as HTMLElement,
+        },
+    }
+
+    // 封装函数，用于解析返回数据为 html
+    function parseData(data) {
+        const tplHtml = `
+<p><small>资源名：</small>{{name}}[{{size}}]</p>
+<p><small>磁力链接：</small><a href="{{magnet}}" target="_blank" title="{{name}}">{{magnet}}</a></p>
+`
+        let html = tplHtml
+        html = html.replace(/{{name}}/g, data.name)
+        html = html.replace(/{{size}}/g, data.size)
+        html = html.replace(/{{magnet}}/g, data.magnet)
+        if (data.ed2k) {
+            html += '<h4>ed2k：</h4>'
+            data.ed2k.forEach((item) => {
+                html += `<p>${item}</p>`
+            })
+        }
+        return html
+    }
+
+    // 封装上传文件
+    function uploadFile(file) {
+        const formData = new FormData()
+        formData.append('torrent', file)
+        return fetch(config.url, {
+            method: 'POST',
+            body: formData,
+        }).then(res => res.json())
+    }
+
+    // 遍历 $$ 对象，判断是否存在
+    let returnFlag = 0
+    for (const key in config.$$) {
+        if (typeof config.$$[key] === 'function' && !config.$$[key]()) {
+            returnFlag += 1
+        } else if (!config.$$[key]) {
+            returnFlag += 1
+        }
+    }
+    if (returnFlag > 0) {
+        return
+    }
+
+    // 上传文件
+    config.$$.$btnSubmit
+        .addEventListener('click', function(e) {
+            e.preventDefault()
+            const $file = config.$$._torrent() as HTMLInputElement
+            const file = $file.files[0]
+            if (!file) {
+                alert('请选择种子文件')
+                return
+            }
+            uploadFile(file).then((res) => {
+                console.log(res)
+                config.$$.$rltBody.innerHTML =
+                        parseData(res)
+                config.$$.$rltHd
+                    .classList.remove('hidden')
+            })
+        })
+
+    new ClipboardJS('.js-copy', {
+        text: function(trigger) {
+            trigger.innerHTML = '已复制'
+        },
+    })
+})()
+</script>
