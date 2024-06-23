@@ -2,3 +2,6 @@
 node_modules
 __pycache__
 *.code-workspace
+
+# 2024-06-23
+*_bak
