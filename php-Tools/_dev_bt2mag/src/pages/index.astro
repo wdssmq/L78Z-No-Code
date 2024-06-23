@@ -1,7 +1,47 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+import Main from '../components/Main.astro';
 ---
 
-<BaseLayout title="Index Title">
-    <button class="btn">Hello daisyUI</button>
+<BaseLayout title="BT 种子转磁力链_BT 种子提取 ed2k">
+    <div class="navbar bg-base-100">
+        <div class="container mx-auto">
+            <h1 class="btn btn-ghost text-xl">BT 种子转磁力链</h1>
+        </div>
+    </div>
+    <div class="container mx-auto">
+        <div class="grid grid-cols-12">
+            <!-- 第一列 ↓ -->
+            <div class="col-span-8 p-4">
+                <Main />
+            </div>
+            <!-- 第二列 ↓ -->
+            <div class="col-span-4 p-4">第二列（占4份）</div>
+        </div>
+    </div>
+
+    <footer class="footer footer-center bg-base-300 text-base-content p-4">
+        <aside>
+            <p>
+                <a
+                    href="https://demo.wdssmq.com/tools/Pinyin/"
+                    target="_blank"
+                    title="心声体">心声体生成</a
+                >
+                <a
+                    href="https://demo.wdssmq.com/tools/"
+                    target="_blank"
+                    title="怪奇工具箱 - 各种奇怪的工具列表 - 水水的演示站"
+                >怪奇工具箱</a
+                >
+                <a href="http://www.wdssmq.com" target="_blank" title="沉冰浮水"
+                >沉冰浮水</a
+                >
+            </p>
+            <!-- <p>
+                Copyright © {new Date().getFullYear()} - All right reserved by
+                ACME Industries Ltd
+            </p> -->
+        </aside>
+    </footer>
 </BaseLayout>
