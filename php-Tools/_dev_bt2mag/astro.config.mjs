@@ -4,7 +4,7 @@ import tailwind from '@astrojs/tailwind'
 
 // https://astro.build/config
 export default defineConfig({
-    base: '/tools/bt2mag',
+    base: '/test/bt2mag',
     trailingSlash: 'never',
     integrations: [
         tailwind(),

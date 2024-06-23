@@ -34,7 +34,7 @@
 import ClipboardJS from 'clipboard';
 (() => {
     const config = {
-        url: 'http://127.0.0.1:8081/Tools/bt2mag/ajax.php',
+        url: location.href + 'ajax.php',
         $$: {
             _torrent: () => document.getElementById('inp-torrent'),
             $btnSubmit: document.getElementById('js-submit') as HTMLButtonElement,
