@@ -12,7 +12,13 @@
 
 ## 使用说明
 
-需要修改 `astro.config.mjs` 文件中的 `base` 为你的项目路径；
+```bash
+# 复制配置文件
+cp env.config.sample.mjs env.config.mjs
+
+```
+
+按需修改  `env.config.mjs` 文件内的配置，主要是 `base` 字段 ——
 
 比如 `base: '/test/bt2mag',` 或 `base: '/tools/bt2mag',`；
 
