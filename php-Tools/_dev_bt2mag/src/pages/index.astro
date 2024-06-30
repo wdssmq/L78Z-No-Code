@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import Main from '../components/Main.astro';
+import Main from '../components/Main.astro'
+import SideBar from '../components/SideBar.astro'
 ---
 
 <BaseLayout title="BT 种子转磁力链_BT 种子提取 ed2k">
@@ -16,7 +17,9 @@ import Main from '../components/Main.astro';
                 <Main />
             </div>
             <!-- 第二列 ↓ -->
-            <div class="col-span-4 p-4">第二列（占4份）</div>
+            <div class="col-span-4 p-4">
+                <SideBar />
+            </div>
         </div>
     </div>
 
@@ -27,13 +30,13 @@ import Main from '../components/Main.astro';
                     href="https://demo.wdssmq.com/tools/Pinyin/"
                     target="_blank"
                     title="心声体">心声体生成</a
-                >
+                > |
                 <a
                     href="https://demo.wdssmq.com/tools/"
                     target="_blank"
                     title="怪奇工具箱 - 各种奇怪的工具列表 - 水水的演示站"
                 >怪奇工具箱</a
-                >
+                > |
                 <a href="http://www.wdssmq.com" target="_blank" title="沉冰浮水"
                 >沉冰浮水</a
                 >
