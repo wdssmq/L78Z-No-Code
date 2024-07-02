@@ -43,13 +43,11 @@ import SideBar from '../components/SideBar.astro'
             </p>
         </aside>
     </footer>
-    <!-- <script
-        src="https://cdn.jsdelivr.net/gh/wdssmq/userscript@main/dist-lib/lib-paiad.js"
-    ></script> -->
+    <script src={`${import.meta.env.BASE_URL}/other/lib-paiad.js`}></script>
     <script>
-import * as mzLib from '../other/lib-paiad.js'
-console.log(mzLib)
-// 当调用 mzLib 时才会引入相应文件，但是 mzLib 又访问不到要用的对象
+// import * as mzLib from '../other/lib-paiad.js'
+// console.log(mzLib)
+// 搞不定 umb 包的导入
 
 // 引入的对象会附加到 window 上
 window.addEventListener('DOMContentLoaded', () => {
