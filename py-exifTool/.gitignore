@@ -1,0 +1,6 @@
+.venv
+*.png
+*.webp
+*.jpg
+*.jpeg
+*.bmp
