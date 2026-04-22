@@ -28,6 +28,9 @@ cp env.config.sample.mjs env.config.mjs
 # 安装依赖
 pnpm install
 
+# 启动开发（会先自动更新 public/other/lib-paiad.js）
+pnpm dev
+
 # 打包
 pnpm build
 

@@ -3,8 +3,10 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "update:paiad": "node ./scripts/update-paiad.mjs",
+    "predev": "pnpm run update:paiad",
+    "prebuild": "pnpm run update:paiad",
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
