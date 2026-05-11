@@ -1,0 +1,81 @@
+groups:
+  - name: "表情"
+    items:
+      - trigger:
+        key: tmtt
+        index: 6
+        text: /微笑
+      - trigger:
+        key: ifh
+        index: 5
+        text: -_-!
+      - trigger:
+        key: hs
+        index: 3
+        text: 「- -」
+      - trigger:
+        key: hs
+        index: 5
+        text: →_→
+      - trigger:
+        key: pz
+        index: 5
+        text: (╯﹏╰）
+      - trigger:
+        key: yy
+        index: 5
+        text: (╯▽╰)
+      - trigger:
+        key: qb
+        index: 5
+        text: （╱/）( ◕‿‿◕ )（\╲）
+      - trigger:
+        key: orz
+        index: 5
+        text: 囧rz
+      - trigger:
+        key: orz
+        index: 5
+        text: 崮rz
+      - trigger:
+        key: orz
+        index: 5
+        text: 莔rz
+      - trigger:
+        key: orz
+        index: 5
+        text: 商rz
+      - trigger:
+        key: orz
+        index: 5
+        text: 冏rz
+      - trigger:
+        key: oo
+        index: 3
+        text: "0.0"
+      - triggers:
+          - key: qttt
+            index: 3
+          - key: dttt
+            index: 3
+        text: o(≧▽≦)ツ┏━┓[拍桌狂笑!]
+      - triggers:
+          - key: rrhj
+            index: 1
+          - key: vcn
+            index: 4
+        text: （╯‵□′）╯︵┴─┴
+      - trigger:
+        key: vcn
+        index: 3
+        text: (╰_╯)#怒
+      - trigger:
+        key: db
+        index: 3
+        text: (●—●)
+      - triggers:
+          - key: dog
+            index: 3
+          - key: doge
+            index: 3
+        text: /doge

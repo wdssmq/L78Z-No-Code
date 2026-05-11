@@ -1,0 +1,121 @@
+groups:
+  - name: "shell 命令"
+    items:
+      # --- win 系统 ---
+      - comment: win 系统 ---
+      - trigger:
+        key: dns
+        index: 1
+        text: ipconfig /flushdns
+      - trigger:
+        key: userfile
+        index: 3
+        text: "%USERPROFILE%"
+      # --- git 相关 ---
+      - comment: git 相关 ---
+      - trigger:
+        key: gitg
+        index: 3
+        text: code ~/.gitconfig
+      - trigger:
+        key: gitig
+        index: 3
+        text: .gitignore
+      # --- ssh 相关 ---
+      - comment: ssh 相关 ---
+      - trigger:
+        key: ssk
+        index: 3
+        text: ssh-keygen -t ecdsa
+      - trigger:
+        key: ssp
+        index: 3
+        text: code ~/.ssh/id_ecdsa.pub
+      - trigger:
+        key: ssa
+        index: 3
+        text: code ~/.ssh/authorized_keys
+      - trigger:
+        key: ssc
+        index: 3
+        text: cd ~/.ssh && ls && code config
+      # --- npm 相关 ---
+      - comment: npm 相关 ---
+      - trigger:
+        key: cnpm
+        index: 3
+        text: npm install -g cnpm --registry=https://registry.npmmirror.com
+      - trigger:
+        key: pnpm
+        index: 3
+        text: npm install -g pnpm --registry=https://registry.npmmirror.com
+      # -- Docker 相关 ---
+      - comment: Docker 相关 ---
+      - trigger:
+        key: dks
+        index: 3
+        text: sudo service docker start
+      - trigger:
+        key: dks
+        index: 4
+        text: sudo service docker stop
+      - trigger:
+        key: dkia
+        index: 3
+        text: sudo docker image ls
+      - trigger:
+        key: dkrmi
+        index: 3
+        text: sudo docker rmi
+      - trigger:
+        key: dkrmi
+        index: 4
+        text: sudo docker rmi -f
+      - trigger:
+        key: dkst
+        index: 3
+        text: sudo docker start
+      - trigger:
+        key: dkst
+        index: 4
+        text: sudo docker stop
+      - trigger:
+        key: dkps
+        index: 3
+        text: sudo docker ps -a
+      - trigger:
+        key: dkrm
+        index: 3
+        text: sudo docker rm --force
+      - trigger:
+        key: dkrm
+        index: 4
+        text: sudo docker rm
+      - triggers:
+          - key: dk
+            index: 3
+          - key: dko
+            index: 3
+          - key: dok
+            index: 3
+        text: Docker
+      - trigger:
+        key: dcc
+        index: 3
+        text: sudo docker-compose config
+      - trigger:
+        key: dcu
+        index: 3
+        text: sudo docker-compose up
+      - trigger:
+        key: dcu
+        index: 4
+        text: sudo docker-compose up -d
+      - trigger:
+        key: dcd
+        index: 3
+        text: sudo docker-compose down
+      - trigger:
+        key: dcps
+        index: 3
+        text: sudo docker-compose ps

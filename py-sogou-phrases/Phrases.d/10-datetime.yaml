@@ -1,0 +1,54 @@
+groups:
+  - name: "日期时间相关"
+    items:
+      - comment: 将作为注释显示在短语列表里，方便理解和维护 ---
+      # --- jjad → 日期 ---
+      - comment: jjad → 日期 ---
+      - triggers:
+          - key: jjad
+            index: 2
+          - key: date
+            index: 2
+        text: "#$year 年 $month_mm 月 $day_dd 日"
+      - triggers:
+          - key: jjad
+            index: 3
+          - key: date
+            index: 3
+        text: "#$year-$month_mm-$day_dd"
+      - triggers:
+          - key: jjad
+            index: 4
+          - key: date
+            index: 4
+        text: "#$year_cn年$month_cn月$day_cn日"
+      # --- jfuj → 时间 ---
+      - comment: jfuj → 时间 ---
+      - triggers:
+          - key: jfuj
+            index: 2
+          - key: time
+            index: 2
+        text: "#$year 年 $month_mm 月 $day_dd 日 $fullhour_hh:$minute_mm:$second_ss"
+      - triggers:
+          - key: jfuj
+            index: 3
+          - key: time
+            index: 3
+        text: "#$year-$month_mm-$day_dd $fullhour_hh:$minute_mm:$second_ss"
+      - triggers:
+          - key: jfuj
+            index: 4
+          - key: time
+            index: 4
+        text: "#$fullhour_hh:$minute_mm:$second_ss"
+      # --- xygk → 编号，用于生成文件名等 ---
+      - comment: xygk → 编号，用于生成文件名等 ---
+      - trigger:
+        key: xykg
+        index: 2
+        text: "#$year-$month_mm-$day_dd-$fullhour_hh-$minute_mm-$second_ss"
+      - trigger:
+        key: xykg
+        index: 3
+        text: "#$year$month_mm$day_dd$fullhour_hh$minute_mm$second_ss"
