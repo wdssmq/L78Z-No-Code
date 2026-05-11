@@ -2,6 +2,7 @@
 node_modules
 __pycache__
 *.code-workspace
+.venv
 
 # 2024-06-23
 *_bak
